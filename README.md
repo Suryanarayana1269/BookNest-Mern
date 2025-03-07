@@ -1,64 +1,92 @@
-###Project Overview :
-  BookNest is a Bookstore Applications.Developed using MERN stack. BookNest Provides best User Experience via Hassle Free Browsing
-  
-###Cloning:
-   Use Vs code and open terminal and run command :
-   git clone https://github.com/Suryanarayana1269/BookNest-Mern/
+# BookNest: Where Stories Nestle
 
-###Create .env file for backend:
-    -->In the backend folder create a file named with .env and define/setup the following things:
-      DB_URL = 'mongodb+srv://suryanarayanabodapati1269:Surya4401@booknest.5snar.mongodb.net/' //Connect Your MongoDB URL
-      JWT_SECRET_KEY = 'MySuperSuccess@1269'
+## Project Overview
+BookNest is a Bookstore Application developed using the MERN stack. It provides an excellent user experience with hassle-free browsing and a seamless interface.
 
-###Setup and Configure Firebase for Authentication with Sign with Google and many other:
-   --> Click this link https://console.firebase.google.com/?fb_gclid=Cj0KCQiAz6q-BhCfARIsAOezPxneTuOKyYX2WnX65YX7kWWX43lH7gmTI74tACGjDrkKkXE8UWxF4JkaArriEALw_wcB&_gl=1*1ey9dpu*_up*MQ..*_ga*OTIzNjM1MzUyLjE3NDA1NjkyMDE.*_ga_CW55HF8NVT*MTc0MTM3MjU2My44LjAuMTc0MTM3MjU2My42MC4wLjA.&gclid=Cj0KCQiAz6q-BhCfARIsAOezPxneTuOKyYX2WnX65YX7kWWX43lH7gmTI74tACGjDrkKkXE8UWxF4JkaArriEALw_wcB&gclsrc=aw.ds
-   
--->After Clicking above link You have to create a Project and after that select Authentication 
--->Enable Sign-Methods 
---> Configure Environment varialbes:
-    Eg:
-    apiKey: "AIzaSyAyB9PSo2EnbZTqTHKLNxxZCd44LgPPcbk",
-    authDomain: "booknest-2854f.firebaseapp.com",
-    projectId: "booknest-2854f",
-    storageBucket: "booknest-2854f.firebasestorage.app",
-    messagingSenderId: "180863150528",
-    appId: "1:180863150528:web:c21caf36386f2b57098025",
-    measurementId: "G-RPT8KD82Q5"
+## Cloning the Repository
+To get started, open VS Code, launch the terminal, and run the following command:
+```sh
+git clone https://github.com/Suryanarayana1269/BookNest-Mern/
+```
 
-    
-###Create .evn.local in frontend folder:
-    -->In the backend folder create a file named with .env.local and define/setup the following things:
-        VITE_API_KEY="AIzaSyAyB9PSo2EnbZTqTHKLNxxZCd44LgPPcbk"
-        VITE_Auth_Domain="booknest-2854f.firebaseapp.com"
-        VITE_PROJECT_ID="booknest-2854f"
-        VITE_STORAGE_BUCKET="booknest-2854f.firebasestorage.app"
-        VITE_MESSAGING_SENDERID="180863150528"
-        VITE_APPID="1:180863150528:web:c21caf36386f2b57098025"
-        VITE_MEASUREMENT_ID="G-RPT8KD82Q5"
-    
-###Install Node Modules for frontend and backend:
-   -> open integrated terminal for frontend and install node modules :
-   eg: D:\BookNest\frontend
-   D:\BookNest\frontend>npm install
+## Backend Configuration
+### Create a `.env` file in the backend folder
+Navigate to the backend directory and create a `.env` file with the following variables:
+```env
+DB_URL=your_mongodb_connection_string
+JWT_SECRET_KEY=your_secret_key
+```
+> **Note:** Replace `your_mongodb_connection_string` and `your_secret_key` with actual values.
 
-   ->open integrated terminal for backend too and install node modules:
-    eg: D:\BookNest\backend
-    D:\BookNest\frontend>npm install
+## Firebase Authentication Setup
+1. Open [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Navigate to **Authentication** > **Sign-in Method**
+4. Enable desired sign-in providers (e.g., Google Authentication)
+5. Configure Firebase environment variables:
+```env
+apiKey=your_api_key
+authDomain=your_project.firebaseapp.com
+projectId=your_project
+storageBucket=your_project.appspot.com
+messagingSenderId=your_messaging_sender_id
+appId=your_app_id
+measurementId=your_measurement_id
+```
+> **Note:** Replace placeholders with actual Firebase credentials.
 
-  -->Install firebase in frontend using command :
-     Eg:
-     D:\BookNest\frontend>npm install firebase
+## Frontend Configuration
+### Create a `.env.local` file in the frontend folder
+Navigate to the frontend directory and create a `.env.local` file with the following:
+```env
+VITE_API_KEY=your_api_key
+VITE_AUTH_DOMAIN=your_project.firebaseapp.com
+VITE_PROJECT_ID=your_project
+VITE_STORAGE_BUCKET=your_project.appspot.com
+VITE_MESSAGING_SENDERID=your_messaging_sender_id
+VITE_APPID=your_app_id
+VITE_MEASUREMENT_ID=your_measurement_id
+```
 
-###Run backend and frontend terminals simultaneously:
-     D:\BookNest\backend>npm start
-     D:\BookNest\frontend>npm run dev
+## Installing Dependencies
+### Install Node Modules
+Run the following commands in separate terminals for frontend and backend:
+```sh
+# For frontend
+d:
+cd BookNest/frontend
+npm install
 
-##After run the above commands the backend connected to MongoDb and Server started and the frontend started the deployment server in the localhost:5173
+# For backend
+d:
+cd BookNest/backend
+npm install
+```
 
-#####Demo Video link:
-https://drive.google.com/file/d/1rMNIIJWn3BMdSqNJ4W-XtAgL3gRCSV-Z/view?usp=drive_link
+### Install Firebase in Frontend
+```sh
+npm install firebase
+```
 
-#####Demo Documentation:
-https://docs.google.com/document/d/1Ncz3o-1T1AWU3aHNRFMobTEdFjyHh3x4/edit?usp=drive_link&ouid=112556775906577700191&rtpof=true&sd=true
+## Running the Application
+Run both frontend and backend servers simultaneously:
+```sh
+# Start backend
+cd BookNest/backend
+npm start
 
---------------------------------------------------------------------------------------------------Thank You----------------------------------------------------------------------------------------------------------
+# Start frontend
+cd BookNest/frontend
+npm run dev
+```
+Once both servers are running:
+- The backend will connect to MongoDB and start the server.
+- The frontend will launch on `http://localhost:5173/`.
+
+## Demo Resources
+- 📽️ **Demo Video**: [Watch Here](https://drive.google.com/file/d/1rMNIIJWn3BMdSqNJ4W-XtAgL3gRCSV-Z/view?usp=drive_link)
+- 📄 **Demo Documentation**: [View Here](https://docs.google.com/document/d/1Ncz3o-1T1AWU3aHNRFMobTEdFjyHh3x4/edit?usp=drive_link&ouid=112556775906577700191&rtpof=true&sd=true)
+
+---
+**Thank You!** 😊
+
