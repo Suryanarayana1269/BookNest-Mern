@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+// backend/api/index.js
+const serverless = require('serverless-http');
+const app = require('../index'); // loads exported Express app
+module.exports = serverless(app);
 
 const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
@@ -36,3 +40,17 @@ main().then(() => console.log("Mongodb connect successfully!")).catch(err => con
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
+
+// at the very end of backend/index.js
+
+// Only start listening when NOT deployed as serverless
+if (!process.env.VERCEL) {
+  const port = process.env.PORT || 5000;
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`);
+  });
+}
+
+// export app for the serverless wrapper
+module.exports = app;
+
